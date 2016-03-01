@@ -1,0 +1,18 @@
+$color-white: #FFFFFF;
+$color-grey: #ECEFF1;
+//colors
+$color-primary: #8BC34A;
+
+$color-primay-fallback-1: #689F38;
+$color-primay-fallback-2: #558B2F;
+
+$color-accent: #FF5252;
+
+$shadow-width: 3px;
+$grid-size: 60px;
+
+@mixin _shadow($magnitude) {
+    $shadow1: 0 (1px * $magnitude) (3px * $magnitude) rgba(0,0,0, $magnitude * .12);
+    $shadow2: 0 (1px * $magnitude) (2px * $magnitude) rgba(0,0,0, $magnitude * .24);
+    box-shadow: unquote("#{$shadow1, $shadow2}");
+}
