@@ -1,9 +1,9 @@
-function PageCtrl($scope, $stateParams, $http) {
+function PageCtrl($scope, $stateParams, DataFactory) {
     var vm = this;
     vm.data = null;
-    $http
-        .get('/wp-json/wp/v2/pages/'+$stateParams.id)
-        .then(function(response) {
+    
+    DataFactory
+        .getPageData(0, $stateParams.id, function(response) {
             vm.data = response.data;
         });
  }

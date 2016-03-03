@@ -1,19 +1,19 @@
 <?php
 
-function pferdepark_scripts() {
+function wspa_scripts() {
 
     //  vendor js
     wp_enqueue_script( 'wp-api' );
     wp_enqueue_script( 'vendor', get_template_directory_uri() . '/vendor/vendor.bundle.js');
     
-//    //theme js
+    //theme js
     wp_enqueue_script( 'app', get_template_directory_uri() . '/app.js');
     
 	// Theme stylesheet.
-	wp_enqueue_style( 'pferdepark-style', get_stylesheet_uri() );
+	wp_enqueue_style( 'wspa-style', get_stylesheet_uri() );
 }
 
-add_action( 'wp_enqueue_scripts', 'pferdepark_scripts' );
+add_action( 'wp_enqueue_scripts', 'wspa_scripts' );
 
 function register_top_menu() {
     

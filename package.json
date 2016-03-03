@@ -1,9 +1,8 @@
 {
-  "name": "angularjs Wordpress SPA",
+  "name": "angularjs-wspa",
   "version": "1.0.0",
-  "description": "Wordpress SPA Theme based on angularjs",
-  "author": "puresamari",
-  "license": "MIT",
+  "description": "this is a Wordpress SPA based on Angular.js",
+  "main": "gulpfile.js",
   "devDependencies": {
     "bourbon": "^4.2.6",
     "gulp": "^3.9.0",
@@ -15,5 +14,23 @@
   "dependencies": {
     "angular": "^1.5.0",
     "angular-ui-router": "^0.2.17"
-  }
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/puresamari/angular.js-Wordpress-SPA.git"
+  },
+  "keywords": [
+    "angularjs",
+    "wordpress",
+    "spa"
+  ],
+  "author": "Simon Rothert",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/puresamari/angular.js-Wordpress-SPA/issues"
+  },
+  "homepage": "https://github.com/puresamari/angular.js-Wordpress-SPA#readme"
 }

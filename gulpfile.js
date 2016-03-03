@@ -38,6 +38,7 @@ gulp.task('js', function(){
         'src/app/app.js',
         'src/app/**/*.directive.js',
         'src/app/**/*.controller.js',
+        'src/app/**/*.factory.js',
         'src/app/routes.js'
      ])
     .pipe(uglify({

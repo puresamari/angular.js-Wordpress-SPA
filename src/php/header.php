@@ -1,7 +1,7 @@
 <?php
 /**
  * @package WordPress
- * @subpackage Pferdepark
+ * @subpackage wspa
  */
 ?>
 <!DOCTYPE html>

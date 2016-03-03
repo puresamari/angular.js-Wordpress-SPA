@@ -1,11 +1,11 @@
-function PostCtrl($scope, $stateParams, $http) {
+var PostCtrl =  function PostCtrl($scope, $stateParams, DataFactory) {
+
     var vm = this;
     vm.data = null;
-    $http
-        .get('/wp-json/wp/v2/posts/'+$stateParams.id)
-        .then(function(response) {
+    DataFactory
+        .getPageData(1, $stateParams.id, function(response) {
             vm.data = response.data;
         });
-}
+};
 
 app.controller('PostCtrl', PostCtrl);
