@@ -1,10 +1,9 @@
 <?php get_header(); ?>
 
-<section ng-app="WSPA" layout="column" ng-cloak>
-    <md-toolbar class="md-whiteframe-z2">
+    <md-toolbar layout="row" md-whiteframe="2">
       <div class="md-toolbar-tools">
-        <md-button ui-sref="main.landing" class="md-accent">
-            Home
+        <md-button ui-sref="main.landing" class="md-raised md-accent">
+            Home<md-icon md-font-icon="icon-home" ng-style="{color: 'green', 'font-size':'36px', height:'36px'}">
         </md-button>
         <span flex></span>
         <?= 
@@ -15,10 +14,12 @@
         ?>
     </div>
   </md-toolbar>
-    <md-content flex layout-padding id="wrapper">
+
+<md-content flex layout-padding>
+    <div layout="column" layout-fill layout-align="center"  md-whiteframe="1">
         <md-progress-circular ng-show="loading"></md-progress-circular>
         <section ui-view ng-show="loading"></section>
-    </md-content>
-</section>
+    </div>
+</md-content>
 
 <?php get_footer(); ?>

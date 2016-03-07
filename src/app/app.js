@@ -1,7 +1,7 @@
-var app = angular.module('WSPA', ['ui.router', 'ngMaterial']);
+var app = angular.module('WSPA', ['ui.router', 'ngMaterial', 'ngAnimate']);
 
 app.config(function($mdThemingProvider) {
   $mdThemingProvider.theme('default')
-    .primaryPalette('green')
-    .accentPalette('brown');
+    .primaryPalette('cyan')
+    .accentPalette('pink');
 });
