@@ -1,21 +1,24 @@
 <?php get_header(); ?>
 
-<section class="app" ng-app="WSPA">
-    
-    <section id="top-menu">
-        <div class="menu-items">
-            <a class="menu-item" ui-sref="main.landing">return to main</a>
-            <?= 
-                wp_nav_menu ( [
-                    "menu" => "Top-Menu",
-                    'walker' => new Custom_Walker_Nav_Menu
-                ] ); 
-            ?>
-        </div>
-    </section>
-    
-    <section id="wrapper" ui-view>loading main....</section>
-
+<section ng-app="WSPA" layout="column" ng-cloak>
+    <md-toolbar class="md-whiteframe-z2">
+      <div class="md-toolbar-tools">
+        <md-button ui-sref="main.landing" class="md-accent">
+            Home
+        </md-button>
+        <span flex></span>
+        <?= 
+            wp_nav_menu ( [
+                "menu" => "Top-Menu",
+                'walker' => new Custom_Walker_Nav_Menu
+            ] ); 
+        ?>
+    </div>
+  </md-toolbar>
+    <md-content flex layout-padding id="wrapper">
+        <md-progress-circular ng-show="loading"></md-progress-circular>
+        <section ui-view ng-show="loading"></section>
+    </md-content>
 </section>
 
 <?php get_footer(); ?>

@@ -20,16 +20,27 @@ gulp.task('resources', function () {
 gulp.task('vendor', function(){
     gulp.src([
         'node_modules/angular/angular.min.js',
-        'node_modules/angular-ui-router/release/angular-ui-router.min.js'
+        'node_modules/angular-ui-router/release/angular-ui-router.min.js',
+        'node_modules/angular-animate/angular-animate.min.js',
+        'node_modules/angular-aria/angular-aria.min.js',
+        'node_modules/angular-material/angular-material.min.js'
     ])
         .pipe(concat('vendor.bundle.js'))
         .pipe(gulp.dest('dist/vendor/'));
-    
     gulp.src([
         'node_modules/angular/angular.min.js.map',
         'node_modules/angular-ui-router/angular-ui-router.min.js.map',
-        'node_modules/angular-sanitize/angular-sanitize.min.js.map'
+        'node_modules/angular-animate/angular-animate.min.js.map',
+        'node_modules/angular-aria/angular-aria.min.js.map',
+        'node_modules/angular-material/angular-material.min.js.map'
     ])
+        .pipe(gulp.dest('dist/vendor/'));
+    
+    gulp.src([
+        'node_modules/angular-material/angular-material.min.css',
+        'node_modules/angular-material/angular-material.layouts.min.css',
+    ])
+        .pipe(concat('vendor.bundle.css'))
         .pipe(gulp.dest('dist/vendor/'));
 });
  
