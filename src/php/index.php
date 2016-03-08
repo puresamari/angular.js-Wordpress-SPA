@@ -1,5 +1,4 @@
 <?php get_header(); ?>
-
 <md-toolbar layout="row" md-whiteframe="2">
     <div class="md-toolbar-tools">
         <md-button ui-sref="main.landing" class="md-raised md-accent">

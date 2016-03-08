@@ -22,4 +22,4 @@
     </style>
     
 </head>
-<body ng-app="WSPA" layout="column" ng-cloak>
+<body ng-app="WSPA" layout="column" ng-cloak layout-fill>

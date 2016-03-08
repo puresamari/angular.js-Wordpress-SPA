@@ -9,6 +9,8 @@ app.factory('DataFactory', function($http, $rootScope) {
                 break;
             case 1 : urlAdding = 'posts/' + id;
                 break;
+            case 2 : urlAdding = 'media/' + id;
+                break;
             default: urlAdding = '404';
                 break;
         }

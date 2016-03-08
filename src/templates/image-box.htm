@@ -1,0 +1,32 @@
+<md-dialog aria-label="img-{{image.data.id}}" ng-cloak>
+    <form>
+        <md-toolbar>
+            <div class="md-toolbar-tools">
+                <h2>{{image.data.title.rendered}}</h2>
+                <span flex></span>
+                <md-button ng-click="image.cancel()">
+                    Close
+                </md-button>
+            </div>
+        </md-toolbar>
+        <md-dialog-content>
+            <div layout="row" layout-margin layout-align="center top">
+                <div flex="80" class="image-container">
+                    <img md-whiteframe="4" src="{{image.data.source_url}}">
+                </div>
+            </div>
+            <div layout="row">
+                <textarea>{{image.data}}</textarea>
+            </div>
+        </md-dialog-content>
+        <md-dialog-actions layout="row">
+            <md-button ui-sref="main.image({id:image.data.id})" md-autofocus ng-click="image.cancel()">
+                Open
+            </md-button>
+            <span flex></span>
+            <md-button ng-click="image.cancel()">
+                close
+            </md-button>
+        </md-dialog-actions>
+    </form>
+</md-dialog>

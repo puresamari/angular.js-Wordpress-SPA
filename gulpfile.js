@@ -89,7 +89,7 @@ gulp.task('watch', function () {
 });
 
 gulp.task('dist', function(){
-    gulp.start(['sass', 'vendor', 'js', 'core', 'views', 'resources'])
+    gulp.start(['sass', 'vendor', 'js', 'core', 'views', 'templates', 'resources'])
 });
 
 gulp.task('default', ['dist', 'watch']);

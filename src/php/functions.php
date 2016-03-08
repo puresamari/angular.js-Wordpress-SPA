@@ -11,7 +11,7 @@ function wspa_scripts() {
     wp_enqueue_script( 'app', get_template_directory_uri() . '/app.js');
     
 	// Theme stylesheet.
-//	wp_enqueue_style( 'wspa-style', get_stylesheet_uri() );
+	wp_enqueue_style( 'wspa-style', get_stylesheet_uri() );
 }
 
 add_action( 'wp_enqueue_scripts', 'wspa_scripts' );
@@ -35,9 +35,9 @@ function my_awesome_gallery_shortcode($attr) {
     $ids = explode(",", $attr["ids"]);
     foreach ($ids as $val) {
         $output = $output.
-        '<md-grid-tile md-rowspan="1" md-colspan="3" md-colspan-sm="1" ng-class="tile.background" >'.
-            '<img src="'.wp_get_attachment_thumb_url($val).'" class="img-thumbnail">'.
-            '<md-grid-tile-footer ui-sref="main.image({id:'.$val.'})"><h3>open</h3></md-grid-tile-footer>'.
+        '<md-grid-tile md-rowspan="1" md-colspan="3" md-colspan-sm="1" ng-class="tile.background">'.
+            '<img src="'.wp_get_attachment_thumb_url($val).'" class="img-thumbnail" image-box="'.$val.'">'.
+            '<md-grid-tile-footer><h3>replace</h3></md-grid-tile-footer>'.
         '</md-grid-tile>';
     }
     $output = $output.'</md-grid-list>';
