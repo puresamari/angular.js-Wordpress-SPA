@@ -1,13 +1,23 @@
 # Wordpress SPA with angular.js 
 
-This is a [*Wordpress*][wp] Theme based on [*angular.js*][wp-api] and [*V2 Wp-Api*][wp-api]
+This is a [*Wordpress*][wp] Theme based on [*angular.js*][ng] and [*V2 Wp-Api*][wp-api]
 
 ### Setup
 ---
 
 ##### Requirements
+ + Node.js
  + NPM
 
+##### Dependencies
+
+ + angular - v1.5.0
+ + angular-animate: - v1.5.0
+ + angular-aria: - v1.5.0
+ + angular-material: - v1.0.6
+ + angular-messages: - v1.5.0
+ + angular-ui-router: - v0.2.17
+ 
 ##### Steps
 1. Download and Install [Wordpress][wp]
 2. Download and Install [Wp-Api][wp-api] (Tested on version ***2.0-beta12***)
@@ -68,5 +78,5 @@ If you use the Theme i would like to be linked but you don't have to
 [![forthebadge](http://forthebadge.com/images/badges/powered-by-netflix.svg)](http://forthebadge.com)
 
   [ng]: https://angularjs.org/ "angular.js"
-  [wp-api]: http://v2.wp-api.org/ "Wordpress"
-  [wp]: https://wordpress.org/download/ "Wp Api version 2"
+  [wp-api]: http://v2.wp-api.org/ "Wp Api version 2"
+  [wp]: https://wordpress.org/download/ "Wordpress"
