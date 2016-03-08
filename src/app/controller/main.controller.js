@@ -1,6 +1,5 @@
-function MainCtrl($scope, $http, $stateParams) {
+function MainCtrl($scope) {
     var vm = this;
-    $scope.loading = true;
 }
 
 app.controller('MainCtrl', MainCtrl);

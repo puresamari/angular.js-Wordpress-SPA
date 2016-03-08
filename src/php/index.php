@@ -1,9 +1,9 @@
 <?php get_header(); ?>
 
-    <md-toolbar layout="row" md-whiteframe="2">
-      <div class="md-toolbar-tools">
+<md-toolbar layout="row" md-whiteframe="2">
+    <div class="md-toolbar-tools">
         <md-button ui-sref="main.landing" class="md-raised md-accent">
-            Home<md-icon md-font-icon="icon-home" ng-style="{color: 'green', 'font-size':'36px', height:'36px'}">
+            Home
         </md-button>
         <span flex></span>
         <?= 
@@ -13,12 +13,14 @@
             ] ); 
         ?>
     </div>
-  </md-toolbar>
+</md-toolbar>
 
 <md-content flex layout-padding>
-    <div layout="column" layout-fill layout-align="center"  md-whiteframe="1">
-        <md-progress-circular ng-show="loading"></md-progress-circular>
-        <section ui-view ng-show="loading"></section>
+    <div layout="column" layout-fill layout-align="center center" ng-show="loading">
+        <md-progress-circular class="animate-hide"></md-progress-circular>
+    </div>
+    <div layout="column" layout-fill layout-align="center" md-whiteframe="1" ng-hide="loading">
+        <section ui-view></section>
     </div>
 </md-content>
 

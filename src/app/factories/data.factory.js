@@ -1,7 +1,8 @@
-app.factory('DataFactory', function($http) {
+app.factory('DataFactory', function($http, $rootScope) {
     var service = {};
     
     service.getPageData = function(type, id, _promise) {
+        $rootScope.loading = true;
         var urlAdding = '';
         switch (type) {
             case 0 : urlAdding = 'pages/' + id;
@@ -13,7 +14,10 @@ app.factory('DataFactory', function($http) {
         }
         return $http
             .get('/wp-json/wp/v2/' + urlAdding)
-            .then(_promise);
+            .then(_promise)
+            .then(function(){
+                $rootScope.loading = false;
+            });
     };
     
     return service;
