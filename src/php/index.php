@@ -15,10 +15,10 @@
 </md-toolbar>
 
 <md-content flex layout-padding>
-    <div layout="column" layout-fill layout-align="center center" ng-show="loading">
+    <div layout="column" layout-fill layout-align="center center" ng-show="loading == 'main'">
         <md-progress-circular class="animate-hide"></md-progress-circular>
     </div>
-    <div layout="column" layout-fill layout-align="center" md-whiteframe="1" ng-hide="loading">
+    <div layout="column" layout-fill layout-align="center" md-whiteframe="1" ng-hide="loading == 'main'">
         <section ui-view></section>
     </div>
 </md-content>

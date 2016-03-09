@@ -10,14 +10,7 @@
             </div>
         </md-toolbar>
         <md-dialog-content>
-            <div layout="row" layout-margin layout-align="center top">
-                <div flex="80" class="image-container">
-                    <img md-whiteframe="4" src="{{image.data.source_url}}">
-                </div>
-            </div>
-            <div layout="row">
-                <textarea>{{image.data}}</textarea>
-            </div>
+            <img src="{{image.data.source_url}}">
         </md-dialog-content>
         <md-dialog-actions layout="row">
             <md-button ui-sref="main.image({id:image.data.id})" md-autofocus ng-click="image.cancel()">

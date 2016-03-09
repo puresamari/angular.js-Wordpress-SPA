@@ -8,7 +8,7 @@ app.directive('gallery', function () {
             var vm = this;
             vm.images = [];
             vm.imageIds.forEach(function(imgId){DataFactory
-                .getPageData(2, imgId, function(response) {
+                .getPageData('gallery', 2, imgId, function(response) {
                     vm.images.push(response.data);
                 });
             });
