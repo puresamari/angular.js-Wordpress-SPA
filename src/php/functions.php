@@ -28,19 +28,9 @@ remove_shortcode('gallery', 'gallery_shortcode');
 add_shortcode('gallery', 'my_awesome_gallery_shortcode');
 
 function my_awesome_gallery_shortcode($attr) {
-    $output = '<md-grid-list '.
-        'md-cols="1" md-cols-sm="2" md-cols-md="3" md-cols-gt-md="6" '.
-        'md-row-height-gt-md="1:1" md-row-height="4:3" '.
-        'md-gutter="8px" md-gutter-gt-sm="4px">';
-    $ids = explode(",", $attr["ids"]);
-    foreach ($ids as $val) {
-        $output = $output.
-        '<md-grid-tile md-rowspan="1" md-colspan="3" md-colspan-sm="1" ng-class="tile.background">'.
-            '<img src="'.wp_get_attachment_thumb_url($val).'" class="img-thumbnail" image-box="'.$val.'">'.
-            '<md-grid-tile-footer><h3>replace</h3></md-grid-tile-footer>'.
-        '</md-grid-tile>';
-    }
-    $output = $output.'</md-grid-list>';
+    $ids = str_replace('"', '', json_encode(explode(",", $attr["ids"])));
+    $output = '<gallery image-ids="'.$ids.'"></gallery>';
+//    $output = '<wp-gallery image-ids="0"></wp-gallery>';
     return $output;
 }
 
