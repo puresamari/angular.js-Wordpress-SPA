@@ -22,6 +22,8 @@ function register_top_menu() {
     
 }
 
+add_filter('show_admin_bar', '__return_false');
+
 add_action( 'after_setup_theme', 'register_top_menu' );
 
 remove_shortcode('gallery', 'gallery_shortcode');
