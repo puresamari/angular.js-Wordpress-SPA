@@ -14,7 +14,6 @@
     </div>
 </md-toolbar>
 
-<wp-global-loading></wp-global-loading>
 
 <md-content flex layout-padding>
     <div layout="column" layout-fill layout-align="center" md-whiteframe="1" ng-hide="loading">
@@ -23,3 +22,4 @@
 </md-content>
 
 <?php get_footer(); ?>
+<wp-global-loading></wp-global-loading>

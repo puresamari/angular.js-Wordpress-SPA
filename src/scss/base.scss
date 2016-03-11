@@ -15,3 +15,9 @@ img {
         opacity: 1;
     }
 }
+
+.image {
+    @include position(absolute, 0);
+    background-size: cover;
+    background-position: center;
+}

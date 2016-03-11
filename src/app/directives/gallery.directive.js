@@ -11,7 +11,7 @@ app.directive('gallery', function () {
                 .getPageData(false, 2, imgId, vm, function(response) {
                     vm.images.push(response.data);
                 });
-            });
+            })
         },
         controllerAs: 'gallery',
         bindToController: true,
