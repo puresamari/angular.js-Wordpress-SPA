@@ -1,4 +1,4 @@
-app.directive('gallery', function () {
+app.directive('wspaGallery', function () {
     return {
         restrict: 'E',
         scope: {

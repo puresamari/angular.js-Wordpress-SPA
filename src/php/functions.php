@@ -18,7 +18,7 @@ function register_menus() {
 
 function ng_gallery_shortcode($attr) {
     $ids = str_replace('"', '', json_encode(explode(",", $attr["ids"])));
-    return '<gallery image-ids="'.$ids.'"></gallery>';
+    return '<wspa-gallery image-ids="'.$ids.'"></wspa-gallery>';
 }
 
 class Custom_Walker_Nav_Menu extends Walker_Nav_Menu {

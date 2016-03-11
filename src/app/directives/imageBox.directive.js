@@ -1,8 +1,8 @@
-app.directive('imageBox', function ($mdDialog) {
+app.directive('wspaImageBox', function ($mdDialog) {
     return {
         restrict: 'A',
         scope: {
-            imageID: '=imageBox'
+            imageID: '=wspaImageBox'
         },
         link: function(scope, elem, attrs) {
             elem.bind('click', function() {

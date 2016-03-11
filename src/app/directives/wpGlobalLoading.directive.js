@@ -1,4 +1,4 @@
-app.directive('wpGlobalLoading', function($timeout, $rootScope, $mdDialog){
+app.directive('wspaGlobalLoading', function($timeout, $rootScope, $mdDialog){
     return {
         restrict: 'E',
         link: function($scope, $element, attrs){

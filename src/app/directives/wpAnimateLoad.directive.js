@@ -1,8 +1,8 @@
-app.directive('wpAnimateLoad', function($timeout){
+app.directive('wspaAnimateLoad', function($timeout){
     return {
         restrict: 'A',
         scope: {
-            animateHeight: '=wpAnimateHeight'
+            animateHeight: '=animateHeight'
         },
         link: function($scope, $element, attrs){
             var animheightclass = $scope.animageHeight !== null || undefined ? ' wp-animate-height' : '';

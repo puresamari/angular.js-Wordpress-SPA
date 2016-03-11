@@ -22,4 +22,4 @@
 </md-content>
 
 <?php get_footer(); ?>
-<wp-global-loading></wp-global-loading>
+<wspa-global-loading></wspa-global-loading>
