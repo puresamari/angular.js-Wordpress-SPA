@@ -24,7 +24,7 @@ app.directive('imageBox', function ($mdDialog) {
                 };
                 
                 DataFactory
-                    .getPageData('image-box', 2, scope.imageID, function(response) {
+                    .getPageData(false, 2, scope.imageID, vm, function(response) {
                     vm.data = response.data;
                 });
             }

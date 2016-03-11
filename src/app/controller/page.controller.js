@@ -3,7 +3,7 @@ function PageCtrl($scope, $stateParams, DataFactory) {
     vm.data = null;
     
     DataFactory
-        .getPageData('main', 0, $stateParams.id, function(response) {
+        .getPageData(true, 0, $stateParams.id, vm, function(response) {
             vm.data = response.data;
         });
  }

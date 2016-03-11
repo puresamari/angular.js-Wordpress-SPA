@@ -4,3 +4,14 @@ img {
 .gallery-image {
     overflow: hidden;
 }
+
+[wp-animate-load] {
+    @include transition(all, 1s, ease-in-out);
+    opacity: 0;
+    &.wp-animate-height:not(.loaded) {
+        @include size(0);
+    }
+    &.loaded {
+        opacity: 1;
+    }
+}

@@ -1,6 +1,9 @@
 <div layout="row" layout-fill layout-align="center center">
-    <md-progress-circular ng-show="$root.loading == 'gallery'"></md-progress-circular>
-    <md-grid-list ng-hide="$root.loading == 'gallery'"
+    <div ng-show="gallery.loading" layout="row">
+        <h3>Loading Gallery</h3>
+        <md-progress-circular layout="row"></md-progress-circular>
+    </div>
+    <md-grid-list ng-hide="gallery.loading"
                   md-whiteframe="4" flex="80"
                   md-cols="1" md-cols-sm="2" md-cols-md="3" md-cols-gt-md="6" 
                   md-row-height-gt-md="1:1" md-row-height="4:3" 
@@ -9,7 +12,7 @@
                       class="gallery-image" ng-repeat="img in gallery.images" 
                       md-rowspan="1" md-colspan="3" md-colspan-sm="1" 
                       ng-class="tile.background">
-            <img src="{{img.media_details.sizes.medium.source_url}}" class="img-thumbnail" image-box="img.id">
+            <img wp-animate-loading src="{{img.media_details.sizes.medium.source_url}}" class="img-thumbnail" image-box="img.id">
             <md-grid-tile-footer><h3>{{img.title.rendered}}</h3></md-grid-tile-footer>
         </md-grid-tile>
     </md-grid-list>

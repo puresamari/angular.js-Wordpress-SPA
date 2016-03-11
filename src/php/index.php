@@ -14,11 +14,10 @@
     </div>
 </md-toolbar>
 
+<wp-global-loading></wp-global-loading>
+
 <md-content flex layout-padding>
-    <div layout="column" layout-fill layout-align="center center" ng-show="loading == 'main'">
-        <md-progress-circular class="animate-hide"></md-progress-circular>
-    </div>
-    <div layout="column" layout-fill layout-align="center" md-whiteframe="1" ng-hide="loading == 'main'">
+    <div layout="column" layout-fill layout-align="center" md-whiteframe="1" ng-hide="loading">
         <section ui-view></section>
     </div>
 </md-content>

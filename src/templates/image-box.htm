@@ -10,7 +10,8 @@
             </div>
         </md-toolbar>
         <md-dialog-content>
-            <img src="{{image.data.source_url}}">
+            <md-progress-circular class="animate-hide" ng-show="image.loading"></md-progress-circular>
+            <img wp-animate-load wp-animate-height src="{{image.data.source_url}}" ng-hide="image.loading">
         </md-dialog-content>
         <md-dialog-actions layout="row">
             <md-button ui-sref="main.image({id:image.data.id})" md-autofocus ng-click="image.cancel()">

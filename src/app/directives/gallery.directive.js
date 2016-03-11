@@ -8,7 +8,7 @@ app.directive('gallery', function () {
             var vm = this;
             vm.images = [];
             vm.imageIds.forEach(function(imgId){DataFactory
-                .getPageData('gallery', 2, imgId, function(response) {
+                .getPageData(false, 2, imgId, vm, function(response) {
                     vm.images.push(response.data);
                 });
             });
@@ -17,4 +17,4 @@ app.directive('gallery', function () {
         bindToController: true,
         templateUrl: wpThemeUrl+'/templates/gallery.htm'
     }
-}); 
+});

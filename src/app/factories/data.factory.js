@@ -1,8 +1,9 @@
 app.factory('DataFactory', function($http, $rootScope) {
     var service = {};
     
-    service.getPageData = function(loadingMessage, type, id, _promise) {
-        $rootScope.loading = loadingMessage;
+    service.getPageData = function(global, type, id, _vm, _promise) {
+        $rootScope.loading = global;
+        _vm.loading = true;
         var urlAdding = '';
         switch (type) {
             case 0 : urlAdding = 'pages/' + id;
@@ -18,7 +19,8 @@ app.factory('DataFactory', function($http, $rootScope) {
             .get('/wp-json/wp/v2/' + urlAdding)
             .then(_promise)
             .then(function(){
-                $rootScope.loading = '';
+                _vm.loading = false;
+                $rootScope.loading = false;
             });
     };
     
