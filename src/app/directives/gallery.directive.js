@@ -13,8 +13,8 @@ app.directive('wspaGallery', function () {
                 });
             })
         },
-        controllerAs: 'gallery',
         bindToController: true,
+        controllerAs: 'gallery',
         templateUrl: wpThemeUrl+'/templates/gallery.htm'
     }
 });

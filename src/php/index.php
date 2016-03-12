@@ -16,9 +16,7 @@
 
 
 <md-content flex layout-padding>
-    <div layout="column" layout-fill layout-align="center" md-whiteframe="1" ng-hide="loading">
-        <section ui-view></section>
-    </div>
+    <section layout="column" layout-fill layout-align="center" ui-view ng-hide="loading"></section>
 </md-content>
 
 <?php get_footer(); ?>

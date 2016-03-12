@@ -52,14 +52,14 @@ gulp.task('js', function(){
         'src/app/**/*.factory.js',
         'src/app/routes.js'
      ])
+    .pipe(concat('app.js'))
     .pipe(uglify({
         mangle: false,
         output: {
             beautify: true
         }
     }))
-    .pipe(concat.header('\n//<%= file.path %>\n\n'))
-    .pipe(concat('app.js'))
+//    .pipe(concat.header('\n//<%= file.path %>\n\n'))
     .pipe(wrap('(function(angular) {\n<%= contents %>\n})(window.angular);'))
     .pipe(gulp.dest('dist/'));
 });

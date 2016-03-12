@@ -1,4 +1,3 @@
-<div class="content">
-    <div ng-if="page.data == null">loading page ...</div>
-    <div compile="page.data.content.rendered"></div>
+<md-subheader>{{page.data.title.rendered}}</md-subheader>
+<div layout="column" flex="80" compile="page.data.content.rendered">
 </div>
