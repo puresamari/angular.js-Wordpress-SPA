@@ -17,7 +17,9 @@ app.factory('DataFactory', function($http, $rootScope) {
         }
         return $http
             .get('/wp-json/wp/v2/' + urlAdding)
-            .then(_promise)
+            .then(
+                _promise
+            )
             .then(function(){
                 _vm.loading = false;
                 $rootScope.loading = false;

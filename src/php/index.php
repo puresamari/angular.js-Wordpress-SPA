@@ -15,8 +15,7 @@
 </md-toolbar>
 
 
-<md-content flex layout-padding>
-    <section layout="column" layout-fill layout-align="center" ui-view ng-hide="loading"></section>
+<md-content flex layout-padding ng-hide="loading" ui-view>
 </md-content>
 
 <?php get_footer(); ?>
