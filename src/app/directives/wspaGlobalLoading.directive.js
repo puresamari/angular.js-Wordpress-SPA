@@ -1,4 +1,4 @@
-app.directive('wspaGlobalLoading', function($timeout, $rootScope, $mdDialog){
+function GlobalLoadingDirective($timeout, $rootScope, $mdDialog){
     return {
         restrict: 'E',
         link: function($scope, $element, attrs){
@@ -23,4 +23,6 @@ app.directive('wspaGlobalLoading', function($timeout, $rootScope, $mdDialog){
             });
         }
     }
-})
+}
+
+app.directive('wspaGlobalLoading', GlobalLoadingDirective)

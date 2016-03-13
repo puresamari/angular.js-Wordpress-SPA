@@ -1,4 +1,4 @@
-app.directive('wspaAnimateLoad', function($timeout){
+function AnimateLoad($timeout){
     return {
         restrict: 'A',
         scope: {
@@ -17,4 +17,6 @@ app.directive('wspaAnimateLoad', function($timeout){
             });
         }
     }
-})
+}
+
+app.directive('wspaAnimateLoad', AnimateLoad)

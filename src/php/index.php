@@ -1,5 +1,5 @@
 <?php get_header(); ?>
-<md-toolbar layout="row" md-whiteframe="2">
+<md-toolbar layout="row" md-whiteframe="4">
     <div class="md-toolbar-tools">
         <md-button ui-sref="main.landing" class="md-raised md-accent">
             Home
@@ -15,8 +15,7 @@
 </md-toolbar>
 
 
-<md-content flex layout-padding ng-hide="loading" ui-view>
-</md-content>
+<md-content flex ng-hide="loading" ui-view></md-content>
 
 <?php get_footer(); ?>
 <wspa-global-loading></wspa-global-loading>

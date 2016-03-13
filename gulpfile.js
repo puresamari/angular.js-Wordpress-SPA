@@ -53,6 +53,7 @@ gulp.task('js', function(){
         'src/app/routes.js'
      ])
     .pipe(concat('app.js'))
+    .pipe(wrap('(function(angular) {\n<%= contents %>\n})(window.angular);'))
     .pipe(uglify({
         mangle: false,
         output: {
@@ -60,7 +61,6 @@ gulp.task('js', function(){
         }
     }))
 //    .pipe(concat.header('\n//<%= file.path %>\n\n'))
-    .pipe(wrap('(function(angular) {\n<%= contents %>\n})(window.angular);'))
     .pipe(gulp.dest('dist/'));
 });
  
